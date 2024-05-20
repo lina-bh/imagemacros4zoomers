@@ -35,7 +35,7 @@ textarea.addEventListener("input", async () => {
     timer = null
   }
   const text = textarea.value
-  timer = setTimeout(() => render(text), 90)
+  timer = setTimeout(() => render(text), 3)
   await store("text", text)
 })
 
