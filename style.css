@@ -1,0 +1,60 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:visited {
+  color: #8989ff;
+  background-color: black;
+  padding: 0 0.1em 0 0.1em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: #767676;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  max-width: 540px;
+  margin: 0 auto 0 auto;
+  font-size: 16pt;
+}
+
+body * {
+  flex-shrink: 1;
+}
+
+.textarea {
+  resize: none;
+  font-family: monospace;
+  width: 100%;
+  min-height: 8em;
+}
+
+details {
+  background-color: black;
+  color: white;
+}
+
+details > summary {
+  cursor: pointer;
+}
+
+.sticky {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
