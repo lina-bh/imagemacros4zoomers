@@ -34,9 +34,9 @@ export const createClient = async (script) => {
    * @param {string} method
    */
   return (method, ...params) => {
-    let transferable = []
+    const transfer = []
     if (method === "loadImage" && params[0] instanceof ImageBitmap) {
-      transferable.push(params[0])
+      transfer.push(params[0])
     }
     /** @type {import("./index.js").JSONRequest} */
     const req = {
@@ -44,7 +44,7 @@ export const createClient = async (script) => {
       method,
       params,
     }
-    port.postMessage(req)
+    port.postMessage(req, {transfer})
     return new Promise((r, x) => {
       requests.set(req.id, [r, x])
     })
