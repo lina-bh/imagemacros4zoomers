@@ -1,6 +1,6 @@
 import _throw from "./throw.js"
-import {createClient} from "./messaging.js"
-import {load, store} from "./store.js"
+import { createClient } from "./messaging.js"
+import { load, store } from "./store.js"
 
 /** @type {HTMLImageElement} */
 const renderTarget = document.getElementById("render-target")
@@ -35,7 +35,7 @@ textarea.addEventListener("input", async () => {
     timer = null
   }
   const text = textarea.value
-  timer = setTimeout(() => render(text), 10)
+  timer = setTimeout(() => render(text), 90)
   await store("text", text)
 })
 
@@ -51,5 +51,5 @@ input.addEventListener("change", async () => {
   await render(textarea.value)
 })
 
-textarea.value = await load("text") ?? "middle text"
+textarea.value = (await load("text")) ?? "middle text"
 await render(textarea.value)

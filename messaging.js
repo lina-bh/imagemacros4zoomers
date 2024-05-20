@@ -1,3 +1,5 @@
+import _throw from "./throw.js"
+
 /**
  * @param {string} script
  */

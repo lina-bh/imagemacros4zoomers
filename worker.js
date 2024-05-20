@@ -1,5 +1,4 @@
 import { createServer } from "./messaging.js"
-import { loadLeague } from "./fonts.js"
 import { load, store } from "./store.js"
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz"
